@@ -1,0 +1,260 @@
+/* style.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe4f5, #e0ccff);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background: linear-gradient(to bottom right, #2a003f, #4b0082);
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(128, 0, 128, 0.2);
+}
+
+body.dark-mode .container {
+  background-color: #3b0066;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ff99cc, #cc99ff);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 28px;
+  color: white;
+}
+
+header button {
+  background: #8e2de2;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+header button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #9d50bb, #6e48aa);
+}
+
+.selectors,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  background: #fce4ff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.selectors label {
+  font-weight: 600;
+  color: #6a0dad;
+}
+
+.selectors select,
+.selectors input[type="date"],
+.controls input[type="text"],
+.controls input[type="file"],
+.controls button {
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid #d6b4fc;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #6a0dad;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.selectors select:hover,
+.selectors input[type="date"]:hover,
+.controls input[type="text"]:hover,
+.controls input[type="file"]:hover,
+.controls button:hover {
+  border-color: #9a60ff;
+  background-color: #f9e6ff;
+}
+
+.controls button {
+  background: linear-gradient(to right, #ff8ec7, #c17cff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: linear-gradient(to right, #d96eff, #b84fff);
+}
+
+#studentSection {
+  background: #f5d6ff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#studentSection h2 {
+  color: #7a00cc;
+}
+
+#studentList {
+  list-style: none;
+  padding: 0;
+}
+
+#studentList li {
+  background: linear-gradient(to right, #ff8ec7, #c17cff);
+  margin: 8px 0;
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+#studentList li:hover {
+  transform: scale(1.02);
+}
+
+body.dark-mode #studentList li {
+  background: linear-gradient(to right, #662d91, #9b59b6);
+}
+
+#addStudentForm {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#addStudentForm input,
+#addStudentForm button {
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid #d6b4fc;
+  border-radius: 10px;
+  background: #fff;
+  color: #6a0dad;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#addStudentForm input:focus {
+  border-color: #b84fff;
+  background: #f9e6ff;
+}
+
+#addStudentBtn {
+  background: linear-gradient(to right, #c471ed, #f64f59);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#addStudentBtn:hover {
+  background: linear-gradient(to right, #f64f59, #c471ed);
+}
+
+.file-input {
+  border: 2px solid #d6b4fc;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #6a0dad;
+}
+
+.file-input::file-selector-button {
+  background: linear-gradient(to right, #e040fb, #8e24aa);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.file-input::file-selector-button:hover {
+  background: linear-gradient(to right, #9c27b0, #6a1b9a);
+}
+
+body.dark-mode .selectors,
+body.dark-mode .controls,
+body.dark-mode #studentSection {
+  background-color: #4b0082;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background: #6a0dad;
+  color: white;
+  border: 2px solid #9b59b6;
+}
+
+.highlight {
+  background: yellow !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+.warning-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #ffe4e1, #fcd1ff);
+  color: #6a0dad;
+  border: 2px solid #ff69b4;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+/* Entrance Animation */
+.container {
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Pulse on Click */
+button:active,
+input[type="submit"]:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Attendance Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<div class="container">
+  <header>
+    <h1>Attendance App</h1>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+  </header>
+
+  <div class="selectors">
+    <label for="courseSelect">Course:</label>
+    <select id="courseSelect"></select>
+    <label for="semesterSelect">Semester:</label>
+    <select id="semesterSelect"></select>
+    <label for="subjectSelect">Subject:</label>
+    <select id="subjectSelect"></select>
+    <label for="dateSelect">Date:</label>
+    <input type="date" id="dateSelect" />
+  </div>
+
+  <div class="controls">
+    <input type="file" id="csvInput" class="file-input" />
+    <button onclick="exportToCSV()">Export to CSV</button>
+    <input type="text" placeholder="Search students..." id="searchInput" />
+    <button id="searchBtn">Search</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <section id="studentSection">
+    <div id="addStudentForm">
+      <input type="text" id="studentName" placeholder="Name" />
+      <input type="text" id="studentRoll" placeholder="Roll No" />
+      <button id="addStudentBtn">Add Student</button>
+    </div>
+    <h2>Student List</h2>
+    <ul id="studentList"></ul>
+
+    
+  </section>
+</div>
+
+<div id="noStudentFound" class="warning-popup" style="display: none;">
+  ⚠️ Student Not Found
+</div>
+
+<script src="script.js"></script>
+<script>
+  function logout() {
+    localStorage.removeItem('loggedIn');
+    window.location.href = '../login page/login.html';
+  }
+</script>
+</body>
+</html>
